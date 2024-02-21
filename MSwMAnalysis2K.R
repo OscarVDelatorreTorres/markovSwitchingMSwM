@@ -4,7 +4,7 @@ MSwMAnalysis2K=function(Data){
   TstartTime=Sys.time()
   mod=lm("Return~1",data=Data)
   
-  cat("\f")
+  #cat("\f")
   print("Estimating 2-regime MS model...")
   startTime=Sys.time()
   mod.mswm=msmFit(mod,k=2,p=0,sw=c(T,T),control=list(parallel=F))
